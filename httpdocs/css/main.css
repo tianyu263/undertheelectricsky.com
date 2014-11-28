@@ -1,0 +1,475 @@
+/* =======================================================================
+	General
+========================================================================== */
+@font-face {
+    font-family: 'SFMoviePoster';
+    src: url('/fonts/SFMoviePoster.ttf');
+}
+
+body {
+	background: transparent url(/images/bg-repeat.png) 0 0;
+	font-family: Arial, sans-serif;
+	color: #24021a;
+	margin: 0;
+}
+
+a {
+	outline: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+.wrapper {
+	width: 1120px;
+	height: inherit;
+	margin: 0 auto;
+	position: relative;
+}
+
+.header {
+	position: relative;
+	display: inline;
+	font-size: 35px;
+}
+
+.header:after {
+	position: absolute;
+	bottom: 5px;
+	right: -10px;
+	content: "";
+	width: 0px;
+	height: 0px;
+	border-style: solid;
+	border-width: 0 0 10px 10px;
+	border-color: transparent transparent #ed3478;
+}
+
+.triangle:after {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	content: "";
+	width: 0;
+	height: 0;
+	border-style: solid;
+}
+
+.hover,
+.hover:after {
+	-webkit-transition: all 0.25s;
+	   -moz-transition: all 0.25s;
+	     -o-transition: all 0.25s;
+	        transition:	all 0.25s;
+}
+
+
+/* =======================================================================
+	Nav
+========================================================================== */
+#nav {
+	position: relative;
+	display: block;
+	height: 84px;
+	background-color: #310424;
+	display: block;
+	z-index: 1000;
+	-webkit-box-shadow: -4px 4px 3px rgba(0, 0, 0, 0.66);
+	   -moz-box-shadow: -4px 4px 3px rgba(0, 0, 0, 0.66);
+	        box-shadow: -4px 4px 3px rgba(0, 0, 0, 0.66);
+}
+
+#nav-home {
+	background: transparent url(/images/logo.png) no-repeat center center;
+	font-size: 0px;
+	width: 294px;
+	/* width: 50.8%; */
+	height: inherit;
+	margin: 0 0 0 75px;
+	float: left;
+}
+
+#nav-links,
+#nav-social {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	height: inherit;
+	float: right;
+}
+
+.nav-item {
+	position: relative;
+	display: block;
+	float: left;
+	height: inherit;
+}
+
+.nav-item .link {
+	width: inherit;
+	height: inherit;
+	display: block;
+	font-size: 16px;
+	line-height: 84px;
+	color: #fff;
+	text-decoration: none;
+	padding: 0 25px;
+}
+
+.nav-item:hover {
+	background-color: #4c0a2f;
+}
+
+.nav-item.triangle:after {
+	opacity: 0;
+}
+
+.nav-item.triangle:hover:after {
+	opacity: 1;
+	border-width: 0 0 10px 10px;
+	border-color: transparent transparent #ed3478;
+}
+
+.nav-social {
+	width: 35px;
+	height: 35px;
+	margin: 25px 5px;
+}
+
+.nav-social .link {
+	font-size: 0px;
+}
+
+#nav-facebook {
+	background-image: url(/images/facebook.png);
+	margin-left: 30px;
+}
+
+#nav-twitter {
+	background-image: url(/images/twitter.png);
+}
+
+/* =======================================================================
+	Intro
+========================================================================== */
+#intro {
+	display: block;
+	position: relative;
+}
+
+#intro:before {
+	content: "";
+	position: absolute;
+	width: 70%;
+	height: 100%;
+	background: rgba(0,0,0,0);
+	background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(0,0,0,0)), color-stop(100%, rgba(0,0,0,1)));
+	background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
+	background: -o-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
+	background: -ms-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
+	background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000', GradientType=0 );
+}
+
+#intro-title {
+	max-width: 583px;
+	width: 52.1%;
+	margin-top: 100px;
+}
+
+#intro-cover {
+	max-width: 504px;
+	width: 45%;
+	float: right;
+}
+
+/* =======================================================================
+	Intro
+========================================================================== */
+#synopsis {
+	position: relative;
+	background-color: #fff;
+	line-height: 25px;
+	padding: 30px 20px;
+}
+
+#synopsis:before {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	content: "";
+	width: 0;
+	height: 0;
+	margin-left: -25px;
+	border-style: solid;
+	border-width: 25px 25px 0 25px;
+	border-color: #000 transparent transparent;
+}
+
+/* =======================================================================
+	Gallery
+========================================================================== */
+#gallery {
+	position: relative;
+	background-color: #4C0A2F;
+	padding: 30px 10px;
+}
+
+#gallery:before {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	content: "";
+	width: 0;
+	height: 0;
+	margin-left: -25px;
+	border-style: solid;
+	border-width: 25px 25px 0 25px;
+	border-color: #fff transparent transparent;
+}
+
+#gallery .header {
+	color: #fff;
+}
+
+#gallery-thumbnails {
+	margin: 0;
+	padding: 0;
+}
+
+.thumbnail {
+	list-style: none;
+	margin: 25px 30px 0 0;
+	padding: 0;
+	display: inline-block;
+	cursor: pointer;
+	position: relative;
+}
+
+.thumbnail:nth-child(3n) {
+	margin-right: 0;
+}
+
+.thumbnail:after {
+	opacity: 0;
+	content: "";
+}
+
+.thumbnail:hover:after {
+	opacity: 1;
+	position: absolute;
+	bottom: 4px;
+	right: 0;
+	content: "";
+	width: 0px;
+	height: 0px;
+	border-style: solid;
+	border-width: 0 0 20px 20px;
+	border-color: transparent transparent #ed3478;
+}
+
+.pico-content {
+	padding: 0 !important;
+	background-color: transparent !important;
+	border-radius: 0 !important;
+}
+
+.pico-close {
+	background-color: #4c0a2f !important;
+	color: #fff;
+}
+
+
+/* =======================================================================
+	Footer
+========================================================================== */
+#footer {
+	background-color: #000;
+	padding: 15px 0;
+	text-align: center;
+	position: relative;
+}
+
+#footer-title {
+	background: transparent url(/images/logo.png) no-repeat center center;
+	font-size: 0px;
+	width: 294px;
+	height: 38px;
+	margin: 0px auto 15px;
+}
+
+#footer-billing {
+	max-width: 894px;
+	width: 100%;
+	margin: 0 auto;
+	display: block;
+	position: relative;
+}
+
+#billing-image {
+	width: inherit;
+}
+
+#billing-link {
+	color: #fd9fda;
+	text-decoration: none;
+	font-size: 12px;
+}
+
+#billing-insomniac {
+	background: transparent url(/images/insomniac.png) no-repeat 0 0;
+	position: absolute;
+	right: 15px;
+	bottom: 15px;
+	width: 134px;
+	height: 20px;
+	font-size: 0px;
+	display: block;
+}
+
+
+/* =======================================================================
+	Tablet
+========================================================================== */
+@media all and (max-width: 1120px) {
+	.wrapper,
+	#intro:before {
+		width: 100%;
+		overflow: hidden;
+	}
+		
+	.thumbnail {
+		margin: 25px 10px 0 0 !important;
+	}
+}
+
+@media all and (max-width: 920px) {
+	#nav-home {
+		margin: 0 10px;
+	}
+	
+	.nav-item .link {
+		padding: 0 10px;
+	}
+	
+	#nav-facebook {
+		margin-left: 10px;
+	}
+	
+}
+
+/* =======================================================================
+	Mobile
+========================================================================== */
+@media all and (max-width: 750px) {
+
+	#nav-home,
+	#nav-links,
+	#nav-social {
+		position: absolute;
+	}
+	
+	#nav-home,
+	#nav-social {
+		top: 10px;
+	}
+	
+	#nav-home {
+		margin: 0;
+		left: 5px;
+		height: 38px;
+		width: 200px;
+		background-size: 100% auto;
+/* 		background-size: 100% auto; */
+	}
+	
+	#nav-social {
+		right: 0;
+	}
+	
+	#nav-social .nav-item {
+		margin-top: 0;
+	}
+	
+	#nav-links {
+		width: 100%;
+		bottom: 0;
+		height: 32px;
+		text-align: center;
+	}
+	
+	#nav-links .nav-item {
+		width: 49%;
+		text-align: center;
+		display: inline-block;
+		float: none;
+	}
+	
+	.nav-item .link {
+		line-height: 32px;
+		padding: 0;
+		width: 100%;
+	}
+	
+	#intro {
+		height: auto;
+	}
+
+	#intro-title {
+		margin: 0;
+		width: 90%;
+		z-index: 10;
+		margin: 10px auto;
+		float: none;
+		display: block;
+	}
+	
+	#intro-cover {
+		float: none;
+		width: 100%;
+		max-width: none;
+	}
+	
+	.thumbnail {
+		display: none;
+	}
+	
+	.thumbnail:first-child,
+	.thumbnail:first-child img {
+		display: block;
+		width: 100%;
+	}
+	
+	.pico-content {
+		width: 80% !important;
+		left: 50% !important;
+		top: 50% !important;
+		margin: 0 !important;
+		-webkit-transform: translate(-50%, -50%);
+		   -moz-transform: translate(-50%, -50%);
+		     -o-transform: translate(-50%, -50%);
+		        transform: translate(-50%, -50%);
+	}
+	
+	.pico-content img {
+		width: 100%;
+	}
+	
+	#footer-title {
+		margin-bottom: 0px;
+	}
+	
+	#billing-image {
+		display: none;
+	}		
+	
+	#billing-insomniac {
+		position: relative;
+		right: auto;
+		bottom: auto;
+		margin: 5px auto;
+	}
+
+}
